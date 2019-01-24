@@ -1,3 +1,6 @@
+###Regressional analysis
+
+install.packages("tidyverse")
 library(tidyverse)
 
 Unemployment <- read.csv("Data/Unemployment.csv", sep = ",")
@@ -60,7 +63,9 @@ Unemployment2 %>%
   ylab("Spending per student (USD)") +
   labs(title = "Unemployment decreases with greater government spending per student", 
        subtitle = "Unemployment as a function of cost per student in higher education", 
-       caption = "Source: OECD")
+       caption = "Source: OECD") + 
+  theme(plot.title = element_text(size = 11, face = 'bold'),
+      axis.title=element_text(size=11))
 
 ###Comparision with expenditures
 
@@ -98,6 +103,8 @@ Unemployment2 %>%
   geom_point() +
   geom_smooth(method='lm') + 
   xlab("Unemployment rate") +
-  ylab("Proportion of total government expenditures for higher education (per cent)") +
+  ylab("Proportion of total government expenditures for higher education") +
   labs(title = "Unemployment decreases as government higher education spending increases", 
-       caption = "Source: OECD")
+       caption = "Source: OECD") +
+  theme(plot.title = element_text(size = 10, face = 'bold'),
+        axis.title=element_text(size=9))
