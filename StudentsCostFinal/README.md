@@ -1,4 +1,4 @@
-# studentscost
+# Do French students cost too much compared to other OECD countries?
 This is a repository for a study led on R on the theme "Do French students cost too much?"
 
 <ul>
